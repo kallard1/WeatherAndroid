@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.*
-import android.widget.Toast
 import fr.area42.weatherandroid.App
 import fr.area42.weatherandroid.R
 import fr.area42.weatherandroid.utils.toast
@@ -54,7 +53,7 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
     }
 
     override fun onCitySelected(city: City) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun onCityDeleted(city: City) {
