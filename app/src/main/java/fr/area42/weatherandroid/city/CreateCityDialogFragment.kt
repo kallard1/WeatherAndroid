@@ -9,6 +9,9 @@ import android.text.InputType
 import android.widget.EditText
 import fr.area42.weatherandroid.R
 
+/**
+ * Dialogue pour l'ajout d'une ville
+ */
 class CreateCityDialogFragment : DialogFragment() {
     interface CreateCityDialogListener {
         fun onDialogPositiveClick(cityName: String)
