@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Weather Android</string>
+    <string name="new_city_title">New city name:</string>
+    <string name="add_city_positive_button">Add city</string>
+    <string name="add_city_negative_button">Cancel</string>
+    <string name="add_city_hint">New York, London...</string>
 </resources>
