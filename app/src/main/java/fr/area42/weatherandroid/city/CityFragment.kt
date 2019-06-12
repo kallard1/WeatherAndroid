@@ -8,6 +8,7 @@ import android.view.*
 import android.widget.Toast
 import fr.area42.weatherandroid.App
 import fr.area42.weatherandroid.R
+import fr.area42.weatherandroid.utils.toast
 
 class CityFragment : Fragment(), CityAdapter.CityItemListener {
     private lateinit var cities: MutableList<City>
@@ -18,7 +19,6 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         database = App.database
-        cities = mutableListOf()
         setHasOptionsMenu(true)
     }
 
@@ -31,6 +31,8 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        cities = database.getAllCities()
         adapter = CityAdapter(cities, this)
         recyclerView.adapter = adapter
     }
@@ -56,7 +58,7 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
     }
 
     override fun onCityDeleted(city: City) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        showDeleteCityDialog(city)
     }
 
     private fun showCreateCityDialog() {
@@ -72,11 +74,39 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
         createCityFragment.show(fragmentManager, "CreateCityDialogFragment")
     }
 
+    private fun showDeleteCityDialog(city: City) {
+        val deleteCityFragment = DeleteCityDialogFragment.newInstance(city.name)
+        deleteCityFragment.listener = object: DeleteCityDialogFragment.DeleteCityDialogListener {
+            override fun onDialogPositiveClick() {
+                deleteCity(city)
+            }
+
+            override fun onDialogNegativeClick() {}
+
+        }
+
+        deleteCityFragment.show(fragmentManager, "DeleteCityDialogFragment")
+    }
+
     private fun saveCity(city: City) {
         if (database.createCity(city)) {
             cities.add(city)
+            adapter.notifyDataSetChanged()
+            context?.toast(getString(R.string.create_city_success, city.name))
+
         } else {
-            Toast.makeText(context, "Could not create city", Toast.LENGTH_SHORT).show()
+            context?.toast(getString(R.string.could_not_create_city_error))
+        }
+    }
+
+    private fun deleteCity(city: City) {
+        if (database.deleteCity(city)) {
+            cities.remove(city)
+            adapter.notifyDataSetChanged()
+            context?.toast(getString(R.string.delete_city_success, city.name))
+        } else {
+            context?.toast(getString(R.string.could_not_delete_city_error))
+
         }
     }
 }

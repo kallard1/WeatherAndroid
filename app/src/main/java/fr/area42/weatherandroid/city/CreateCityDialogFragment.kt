@@ -29,7 +29,7 @@ class CreateCityDialogFragment : DialogFragment() {
             hint = context.getString(R.string.add_city_hint)
         }
 
-        builder.setTitle(getString(R.string.new_city_title))
+        builder.setTitle(getString(R.string.add_city_title))
             .setView(input)
             .setPositiveButton(R.string.add_city_positive_button,
                 DialogInterface.OnClickListener { _, _ ->
