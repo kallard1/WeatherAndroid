@@ -38,7 +38,7 @@ class DeleteCityDialogFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(context!!)
 
-        val negativeButton = builder.setTitle(getString(R.string.delete_city_title, cityName))
+        builder.setTitle(getString(R.string.delete_city_title, cityName))
             .setPositiveButton(getString(R.string.common_yes)) { _, _ -> listener?.onDialogPositiveClick() }
             .setNegativeButton(getString(R.string.common_no)) { _, _ -> listener?.onDialogNegativeClick() }
 
