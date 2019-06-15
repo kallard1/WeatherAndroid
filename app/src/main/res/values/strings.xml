@@ -17,4 +17,11 @@
 
     <string name="could_not_delete_city_error">Could not delete «%1$s» city</string>
     <string name="delete_city_success">City «%1$s» deleted</string>
+
+    <string name="could_not_load_city_weather">Could not load city weather</string>
+
+    <string name="weather_celsius_temperature_value">%1$.2f°C</string>
+    <string name="weather_fahrenheit_temperature_value">%1$.2f°F</string>
+    <string name="weather_humidity_value">%1$d%%</string>
+    <string name="weather_pressure_value">%1$dhPa</string>
 </resources>
