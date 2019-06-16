@@ -99,7 +99,6 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
             cities.add(city)
             adapter.notifyDataSetChanged()
             context?.toast(getString(R.string.create_city_success, city.name))
-
         } else {
             context?.toast(getString(R.string.could_not_create_city_error))
         }
