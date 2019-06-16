@@ -17,7 +17,7 @@
                 android:id="@+id/icon"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/map_marker" />
+                android:src="@drawable/city_black" />
 
             <TextView
                 android:id="@+id/name"

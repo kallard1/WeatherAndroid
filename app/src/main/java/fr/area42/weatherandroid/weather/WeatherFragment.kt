@@ -20,6 +20,7 @@ import fr.area42.weatherandroid.utils.execute
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.*
 
 class WeatherFragment : Fragment() {
     companion object {
@@ -29,6 +30,7 @@ class WeatherFragment : Fragment() {
 
     private val TAG = WeatherFragment::class.java.simpleName
     private lateinit var cityName: String
+    private lateinit var locale: String
 
     private lateinit var swipeRefresh: SwipeRefreshLayout
     private lateinit var city: TextView
@@ -48,6 +50,7 @@ class WeatherFragment : Fragment() {
         temperature = view.findViewById(R.id.temperature_data)
         humidity = view.findViewById(R.id.humidity_data)
         pressure = view.findViewById(R.id.pressure_data)
+        locale = Locale.getDefault().language
 
         swipeRefresh.setOnRefreshListener { refreshWeather() }
 
@@ -69,7 +72,7 @@ class WeatherFragment : Fragment() {
             swipeRefresh.isRefreshing = true
         }
 
-        val call = App.weatherService.getWeather("$cityName,fr")
+        val call = App.weatherService.getWeather("$cityName,fr", locale)
         call.enqueue(object: Callback<WeatherWrapper> {
             override fun onResponse(call: Call<WeatherWrapper>?, response: Response<WeatherWrapper>?) {
                 response?.body()?.let {

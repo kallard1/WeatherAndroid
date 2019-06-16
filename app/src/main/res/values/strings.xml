@@ -4,19 +4,19 @@
     <string name="common_yes">Yes</string>
     <string name="common_no">No</string>
 
-    <string name="add_city_title">New city name:</string>
-    <string name="add_city_positive_button">Add city</string>
+    <string name="add_city_title">New bookmark</string>
+    <string name="add_city_positive_button">Add</string>
     <string name="add_city_negative_button">Cancel</string>
     <string name="add_city_hint">New York, London...</string>
     <string name="add_city_action_button">Add city</string>
 
-    <string name="delete_city_title">Do you really want to delete %1$s?</string>
+    <string name="delete_city_title">Do you really want to remove %1$s from your bookmarks?</string>
 
-    <string name="could_not_create_city_error">Could not create city</string>
-    <string name="create_city_success">City «%1$s» created!</string>
+    <string name="could_not_create_city_error">Could not add city into bookmarks</string>
+    <string name="create_city_success">City «%1$s» added in bookmarks</string>
 
-    <string name="could_not_delete_city_error">Could not delete «%1$s» city</string>
-    <string name="delete_city_success">City «%1$s» deleted</string>
+    <string name="could_not_delete_city_error">Could not remove «%1$s»</string>
+    <string name="delete_city_success">City «%1$s» removed from bookmarks</string>
 
     <string name="could_not_load_city_weather">Could not load city weather</string>
 
@@ -24,4 +24,8 @@
     <string name="weather_fahrenheit_temperature_value">%1$.2f°F</string>
     <string name="weather_humidity_value">%1$d%%</string>
     <string name="weather_pressure_value">%1$dhPa</string>
+    <string name="temperature">Temperature:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="pressure">Pressure:</string>
+    <string name="get_city_location_action_button" />
 </resources>
