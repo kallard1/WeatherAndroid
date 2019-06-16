@@ -62,7 +62,7 @@ class WeatherFragment : Fragment() {
         }
     }
 
-    private fun updateWeatherForCity(cityName: String) {
+    fun updateWeatherForCity(cityName: String) {
         this.cityName = cityName
 
         if (!swipeRefresh.isRefreshing) {
