@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Météo</string>
+
+    <string name="common_yes">Oui</string>
+    <string name="common_no">Non</string>
+
+    <string name="add_city_title">Nouveau favoris</string>
+    <string name="add_city_positive_button">Ajouter</string>
+    <string name="add_city_negative_button">Annuler</string>
+    <string name="add_city_hint">Paris, Lyon, Lille...</string>
+    <string name="add_city_action_button">Ajouter une ville</string>
+
+    <string name="delete_city_title">Voulez-vous vraiment retirer « %1$s » de vos favoris ?</string>
+
+    <string name="could_not_create_city_error">Impossible d\'ajouter la ville aux favoris</string>
+    <string name="create_city_success">La ville « %1$s » a été ajoutée !</string>
+
+    <string name="could_not_delete_city_error">Impossible de retirer « %1$s » des favoris</string>
+    <string name="delete_city_success">La ville « %1$s » a été retirée des favoris</string>
+
+    <string name="could_not_load_city_weather">Impossible de charger les données météo</string>
+
+    <string name="weather_celsius_temperature_value">%1$.2f°C</string>
+    <string name="weather_fahrenheit_temperature_value">%1$.2f°F</string>
+    <string name="weather_humidity_value">%1$d%%</string>
+    <string name="weather_pressure_value">%1$dhPa</string>
+    <string name="temperature">Température :</string>
+    <string name="humidity">Humidité :</string>
+    <string name="pressure">Pression :</string>
+    <string name="get_city_location_action_button" />
+</resources>
