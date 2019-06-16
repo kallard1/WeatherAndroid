@@ -54,10 +54,15 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
                 showCreateCityDialog()
                 return true
             }
+            R.id.action_locate_city -> {
+                getWeatherByLocation()
+            }
         }
 
         return super.onOptionsItemSelected(item)
     }
+
+
 
     override fun onCitySelected(city: City) {
         listener?.onCitySelected(city)
@@ -80,6 +85,9 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
         createCityFragment.show(fragmentManager, "CreateCityDialogFragment")
     }
 
+    private fun getWeatherByLocation() {
+
+    }
     private fun showDeleteCityDialog(city: City) {
         val deleteCityFragment = DeleteCityDialogFragment.newInstance(city.name)
         deleteCityFragment.listener = object: DeleteCityDialogFragment.DeleteCityDialogListener {

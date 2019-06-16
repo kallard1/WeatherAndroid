@@ -3,6 +3,8 @@ package fr.area42.weatherandroid.city
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
+import android.view.Menu
 import fr.area42.weatherandroid.R
 import fr.area42.weatherandroid.weather.WeatherActivity
 import fr.area42.weatherandroid.weather.WeatherFragment
@@ -15,6 +17,9 @@ class CityActivity : AppCompatActivity(), CityFragment.CityFragmentListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.city_main)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
         cityFragment = supportFragmentManager.findFragmentById(R.id.city_fragment) as CityFragment
         cityFragment.listener = this

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_location"
+        android:id="@+id/action_locate_city"
         android:icon="@drawable/map_marker_white"
         app:showAsAction="ifRoom"
         android:title="@string/get_city_location_action_button"/>
