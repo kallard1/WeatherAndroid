@@ -9,11 +9,8 @@ import android.support.design.widget.CoordinatorLayout
 import android.support.design.widget.Snackbar
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
-import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import fr.area42.weatherandroid.city.CityActivity
-import java.util.*
-import kotlin.concurrent.schedule
 
 class SplashActivity : AppCompatActivity() {
     val PERMISSION_LOCATION_PHONE = 0
