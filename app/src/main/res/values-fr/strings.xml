@@ -27,5 +27,5 @@
     <string name="temperature">Température :</string>
     <string name="humidity">Humidité :</string>
     <string name="pressure">Pression :</string>
-    <string name="get_city_location_action_button" />
+    <string name="get_city_location_action_button" >Me localiser</string>
 </resources>

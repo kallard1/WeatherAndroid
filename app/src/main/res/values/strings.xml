@@ -10,7 +10,7 @@
     <string name="add_city_hint">New York, London...</string>
     <string name="add_city_action_button">Add city</string>
 
-    <string name="delete_city_title">Do you really want to remove %1$s from your bookmarks?</string>
+    <string name="delete_city_title">Do you really want to remove «%1$s» from your bookmarks?</string>
 
     <string name="could_not_create_city_error">Could not add city into bookmarks</string>
     <string name="create_city_success">City «%1$s» added in bookmarks</string>
@@ -27,5 +27,5 @@
     <string name="temperature">Temperature:</string>
     <string name="humidity">Humidity:</string>
     <string name="pressure">Pressure:</string>
-    <string name="get_city_location_action_button" />
+    <string name="get_city_location_action_button" >Locate me</string>
 </resources>
