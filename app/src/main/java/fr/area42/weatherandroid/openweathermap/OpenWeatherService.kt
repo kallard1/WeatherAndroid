@@ -8,7 +8,17 @@ private const val API_KEY = "e645456044265162e6785392aa3c30e3"
 
 interface OpenWeatherService {
     @GET("data/2.5/weather")
-    fun getWeather(@Query("q") cityName: String,
-                   @Query("lang") lang: String = "fr",
-                   @Query("appid") apiKey: String = API_KEY) : Call<WeatherWrapper>
+    fun getWeather(
+        @Query("q") cityName: String,
+        @Query("lang") lang: String = "fr",
+        @Query("appid") apiKey: String = API_KEY
+    ): Call<WeatherWrapper>
+
+    @GET("data/2.5/weather")
+    fun getWeatherByLocation(
+        @Query("lat") lat: Double,
+        @Query("lon") lon: Double,
+        @Query("lang") lang: String = "fr",
+        @Query("appid") apiKey: String = API_KEY
+    ): Call<WeatherWrapper>
 }
