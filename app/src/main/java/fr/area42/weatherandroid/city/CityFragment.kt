@@ -88,6 +88,7 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
     private fun getWeatherByLocation() {
 
     }
+
     private fun showDeleteCityDialog(city: City) {
         val deleteCityFragment = DeleteCityDialogFragment.newInstance(city.name)
         deleteCityFragment.listener = object: DeleteCityDialogFragment.DeleteCityDialogListener {
