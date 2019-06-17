@@ -28,7 +28,12 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".weather.WeatherActivity"
-            android:windowSoftInputMode="adjustResize" />
+            android:parentActivityName=".city.CityActivity"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".city.CityActivity" />
+        </activity>
     </application>
 
 </manifest>
