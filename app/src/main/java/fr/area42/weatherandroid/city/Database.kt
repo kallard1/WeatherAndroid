@@ -20,7 +20,7 @@ CREATE TABLE $CITY_TABLE_NAME (
 )
 """
 
-private const val CITY_QUERY_SELECT_ALL = "SELECT * FROM $CITY_TABLE_NAME"
+private const val CITY_QUERY_SELECT_ALL = "SELECT * FROM $CITY_TABLE_NAME ORDER BY $CITY_KEY_NAME ASC"
 
 class Database(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
