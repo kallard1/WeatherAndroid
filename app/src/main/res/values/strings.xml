@@ -28,4 +28,6 @@
     <string name="humidity">Humidity:</string>
     <string name="pressure">Pressure:</string>
     <string name="get_city_location_action_button" >Locate me</string>
+    <string name="settings_not_connected">You are not connected to internet.\nPlease check your networks settings</string>
+    <string name="close">Close</string>
 </resources>
