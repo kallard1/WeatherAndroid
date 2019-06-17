@@ -40,6 +40,6 @@ class SplashActivity : AppCompatActivity() {
     private fun cityActivity() {
         val intent = Intent(this, CityActivity::class.java)
         startActivity(intent)
-//        finish()
+        finish()
     }
 }
