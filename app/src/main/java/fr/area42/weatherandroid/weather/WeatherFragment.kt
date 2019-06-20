@@ -5,13 +5,11 @@ import android.support.v4.app.Fragment
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.squareup.picasso.Picasso
 import fr.area42.weatherandroid.App
 import fr.area42.weatherandroid.R
@@ -19,6 +17,7 @@ import fr.area42.weatherandroid.openweathermap.WeatherWrapper
 import fr.area42.weatherandroid.openweathermap.mapOpenWeatherDataToWeather
 import fr.area42.weatherandroid.utils.Convert
 import fr.area42.weatherandroid.utils.execute
+import fr.area42.weatherandroid.utils.toast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -88,12 +87,7 @@ class WeatherFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<WeatherWrapper>, t: Throwable) {
-                Log.e(TAG, getString(R.string.could_not_load_city_weather), t)
-                Toast.makeText(
-                    activity,
-                    getString(R.string.could_not_load_city_weather),
-                    Toast.LENGTH_SHORT
-                ).show()
+                context?.toast(getString(R.string.could_not_load_city_weather))
                 swipeRefresh.isRefreshing = false
             }
         })

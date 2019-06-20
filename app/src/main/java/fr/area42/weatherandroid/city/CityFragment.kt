@@ -1,5 +1,6 @@
 package fr.area42.weatherandroid.city
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -7,6 +8,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.*
 import fr.area42.weatherandroid.App
 import fr.area42.weatherandroid.R
+import fr.area42.weatherandroid.gps.GpsActivity
 import fr.area42.weatherandroid.utils.toast
 
 class CityFragment : Fragment(), CityAdapter.CityItemListener {
@@ -62,8 +64,6 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
         return super.onOptionsItemSelected(item)
     }
 
-
-
     override fun onCitySelected(city: City) {
         listener?.onCitySelected(city)
     }
@@ -86,7 +86,8 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
     }
 
     private fun getWeatherByLocation() {
-
+        val intent = Intent(context, GpsActivity::class.java)
+        startActivity(intent)
     }
 
     private fun showDeleteCityDialog(city: City) {
@@ -120,7 +121,6 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
             context?.toast(getString(R.string.delete_city_success, city.name))
         } else {
             context?.toast(getString(R.string.could_not_delete_city_error))
-
         }
     }
 }

@@ -35,6 +35,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".city.CityActivity" />
         </activity>
-    </application>
+        <activity
+            android:name=".gps.GpsActivity"
+            android:parentActivityName=".city.CityActivity"
+            android:windowSoftInputMode="adjustResize" />
 
+        <service android:name=".service.GpsService" />
+    </application>
 </manifest>

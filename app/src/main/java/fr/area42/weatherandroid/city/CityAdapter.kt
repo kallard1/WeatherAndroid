@@ -9,7 +9,7 @@ import android.widget.TextView
 import fr.area42.weatherandroid.R
 
 class CityAdapter(private val cities: List<City>,
-                  private val cityListener: CityAdapter.CityItemListener) : RecyclerView.Adapter<CityAdapter.ViewHolder>(),
+                  private val cityListener: CityItemListener) : RecyclerView.Adapter<CityAdapter.ViewHolder>(),
     View.OnClickListener {
 
     interface CityItemListener {

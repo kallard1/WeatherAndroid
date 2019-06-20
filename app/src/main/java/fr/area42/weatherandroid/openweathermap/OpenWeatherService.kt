@@ -16,8 +16,8 @@ interface OpenWeatherService {
 
     @GET("data/2.5/weather")
     fun getWeatherByLocation(
-        @Query("lat") lat: Double,
-        @Query("lon") lon: Double,
+        @Query("lat") lat: Double? = 0.0,
+        @Query("lon") lon: Double? = 0.0,
         @Query("lang") lang: String = "fr",
         @Query("appid") apiKey: String = API_KEY
     ): Call<WeatherWrapper>

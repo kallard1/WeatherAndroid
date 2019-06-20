@@ -13,6 +13,7 @@
         android:background="#039BE5">
 
         <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/logo"
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:src="@drawable/ic_cloud_sun_light"
@@ -20,5 +21,15 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
     </android.support.constraint.ConstraintLayout>
 </android.support.design.widget.CoordinatorLayout>
